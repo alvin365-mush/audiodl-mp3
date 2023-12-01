@@ -1,6 +1,6 @@
 {
-  "name": "ytdl-mp3",
-  "version": "3.4.1",
+  "name": "audiodl-mp3",
+  "version": "1.1.8",
   "description": "An NPM package to facilitate downloading music from YouTube, including automatic retrieval of ID3 tags and album art via the iTunes public API.",
   "keywords": [
     "youtube",
@@ -8,16 +8,16 @@
     "mp3",
     "music"
   ],
-  "homepage": "https://github.com/alvin365-mush/ytdl-mp3#readme",
+  "homepage": "https://github.com/alvin365-mush/audiodl-mp3#readme",
   "bugs": {
-    "url": "https://github.com/alvin365-mush/ytdl-mp3/issues"
+    "url": "https://github.com/alvin365-mush/audiodl-mp3/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alvin365-mush/ytdl-mp3.git"
+    "url": "git+https://github.com/alvin365-mush/audiodl-mp3.git"
   },
   "license": "MIT",
-  "author": "Joshua Unrau",
+  "author": "alvin",
   "type": "module",
   "exports": {
     ".": {
@@ -30,7 +30,7 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "ytdl-mp3": "./bin/ytdl-mp3.cjs"
+    "audiodl-mp3": "bin/audiodl-mp3.cjs"
   },
   "files": [
     "bin",
@@ -41,9 +41,9 @@
   ],
   "scripts": {
     "build": "rmdir -rf dist && tsup",
-    "build:bundle": "esbuild bin/ytdl-mp3.cjs --bundle --minify --platform=node --target=node18 --outfile=build/app.js",
+    "build:bundle": "esbuild bin/audiodl-mp3.cjs --bundle --minify --platform=node --target=node18 --outfile=build/app.js",
     "build:compile": "pkg --out-path=build --target=latest build/app.js",
-    "cli": "node ./bin/ytdl-mp3",
+    "cli": "node ./bin/audiodl-mp3",
     "compile": "npm run build",
     "dev": "tsup --watch",
     "format": "prettier --write src",
@@ -53,12 +53,12 @@
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
+    "audiodl-mp3": "^1.1.6",
     "axios": "^1.5.0",
     "commander": "^11.0.0",
     "ffmpeg-static": "^5.2.0",
     "node-id3": "^0.2.6",
-    "ytdl-core": "4.11.5",
-    "ytdl-mp3": "^3.4.0"
+    "ytdl-core": "4.11.5"
   },
   "devDependencies": {
     "@joshunrau/eslint-config": "^2.1.3",

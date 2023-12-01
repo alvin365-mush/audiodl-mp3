@@ -10,7 +10,7 @@ export interface SearchResult {
   trackCount: number;
   trackId: number;
   discNumber: number;
-  trackNumber: number;
+  trackNumber: string;
   collectionId: number;
 }
 
@@ -36,7 +36,7 @@ export interface SongTags {
   trackCount: number;
   trackId: number;
   discNumber: number;
-  trackNumber: number;
+  trackNumber: string;
   albumId: number;
 }
 
