@@ -8,13 +8,13 @@
     "mp3",
     "music"
   ],
-  "homepage": "https://github.com/joshunrau/ytdl-mp3#readme",
+  "homepage": "https://github.com/alvin365-mush/ytdl-mp3#readme",
   "bugs": {
-    "url": "https://github.com/joshunrau/ytdl-mp3/issues"
+    "url": "https://github.com/alvin365-mush/ytdl-mp3/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joshunrau/ytdl-mp3.git"
+    "url": "git+https://github.com/alvin365-mush/ytdl-mp3.git"
   },
   "license": "MIT",
   "author": "Joshua Unrau",
@@ -40,7 +40,7 @@
     "package.json"
   ],
   "scripts": {
-    "build": "rm -rf dist && tsup",
+    "build": "rmdir -rf dist && tsup",
     "build:bundle": "esbuild bin/ytdl-mp3.cjs --bundle --minify --platform=node --target=node18 --outfile=build/app.js",
     "build:compile": "pkg --out-path=build --target=latest build/app.js",
     "cli": "node ./bin/ytdl-mp3",
