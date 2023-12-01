@@ -7,6 +7,11 @@ export interface SearchResult {
   artistName: string;
   trackName: string;
   artworkUrl100: string;
+  trackCount: number;
+  trackId: number;
+  discNumber: number;
+  trackNumber: number;
+  collectionId: number;
 }
 
 export interface SearchData {
@@ -28,6 +33,11 @@ export interface SongTags {
   title: string;
   artist: string;
   image: AlbumArt;
+  trackCount: number;
+  trackId: number;
+  discNumber: number;
+  trackNumber: number;
+  albumId: number;
 }
 
 export class SongTagsSearch {
@@ -50,6 +60,11 @@ export class SongTagsSearch {
     return {
       title: result.trackName,
       artist: result.artistName,
+      trackCount: result.trackCount,
+      trackId: result.trackId,
+      discNumber: result.discNumber,
+      trackNumber: result.trackNumber,
+      albumId: result.collectionId,
       image: {
         mime: 'image/png',
         type: {
